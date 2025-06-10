@@ -410,3 +410,10 @@ prime_ministers AS p2 ON p1.country = p2.country
 INNER JOIN states AS p3 
 ON p1.country = p3.country
 
+
+--- chained INNER JOIN with using 
+SELECT p1.country, p1.continent, prime_minister, president , pm_start
+FROM prime_ministers AS p1 INNER JOIN 
+presidents AS p2 USING (country)
+INNER JOIN prime_minister_terms 
+using (prime_minister)

@@ -392,3 +392,9 @@ HAVING AVG(duration) > 120;
 SELECT prime_ministers.country, prime_ministers.continent, prime_minister, president
 From presidents
 INNER JOIN prime_ministers ON prime_ministers.country = presidents.country
+
+--Using INNER join as Aliases
+SELECT P2.country, p2.continent, prime_minister, president
+FROM prime_ministers AS p2
+INNER JOIN presidents AS p1 
+ON p2.country = p1.country

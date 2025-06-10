@@ -398,3 +398,8 @@ SELECT P2.country, p2.continent, prime_minister, president
 FROM prime_ministers AS p2
 INNER JOIN presidents AS p1 
 ON p2.country = p1.country
+
+--INNER JOIN with Using operator 
+SELECT p2.country, p2.continent, prime_minister, president 
+FROM presidents AS p1 INNER JOIN prime_ministers AS p2 
+USING (country);

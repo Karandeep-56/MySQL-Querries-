@@ -389,4 +389,6 @@ FROM films
 GROUP BY release_year  
 HAVING AVG(duration) > 120;
 
-
+SELECT prime_ministers.country, prime_ministers.continent, prime_minister, president
+From presidents
+INNER JOIN prime_ministers ON prime_ministers.country = presidents.country
